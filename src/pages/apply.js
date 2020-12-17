@@ -2,12 +2,12 @@ import React from "react"
 import ApplySection from "../components/ApplySection"
 import SEO from "../components/layout/seo"
 import Layout from "../components/layout/layout"
-import HeaderSection from "../components/sections/HeaderSection"
 import styled from "styled-components"
+import Header from "../components/sections/Header"
 const Apply = () => {
   return (
     <Wrapper>
-      <HeaderSection />
+      <Header />
       <SEO title="apply" />
       <ApplySection />
       <Layout />

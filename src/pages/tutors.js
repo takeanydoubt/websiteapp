@@ -2,16 +2,17 @@ import styled from "styled-components"
 import React from "react"
 import SEO from "../components/layout/seo"
 import Layout from "../components/layout/layout"
-import HeaderSeaction from "../components/sections/HeaderSection"
+
 import TutorCard from "../components/sections/TutorCard"
 import TutorContextProvider from "../context/TutorContext"
+import Header from "../components/sections/Header"
 const Tutors = () => {
   return (
     <Wrapper>
       <SEO title="tutors" />
 
       <Layout>
-        <HeaderSeaction />
+        <Header />
         <WrapText>
           <Title>Online Tutors</Title>
           <Description>Connect with an online tutor instantly</Description>

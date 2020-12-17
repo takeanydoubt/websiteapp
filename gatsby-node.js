@@ -1,12 +1,32 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+// // /**
+// //  * Implement Gatsby's Node APIs in this file.
+// //  *
+// //  * See: https://www.gatsbyjs.com/docs/node-apis/
+// //  */
 
-// You can delete this file if you're not using it
-
-// Requiring function causes error during builds
-// as the code tries to reference window
-
-// Wrap the require in check for window
+// exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+//   if (stage === "build-html") {
+//     actions.setWebpackConfig({
+//       module: {
+//         rules: [
+//           {
+//             test: /Header/,
+//             use: loaders.null(),
+//           },
+//           {
+//             test: /index/,
+//             use: loaders.null(),
+//           },
+//           {
+//             test: /styled-components/,
+//             use: loaders.null(),
+//           },
+//           {
+//             test: /gatsby-ssr/,
+//             use: loaders.null(),
+//           },
+//         ],
+//       },
+//     })
+//   }
+// }

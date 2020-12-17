@@ -2,58 +2,25 @@ import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 
-// import { Link } from "gatsby"
-
-export default function AuthForm(props) {
-  const { isRegistered } = props
-
+export default function ResetForm() {
   return (
-    <Wrapper isOpen={isRegistered}>
-      {/* <img alt="" src="images/galery/cover.svg" /> */}
+    <Wrapper>
       <MyForm>
         <FormGroup>
-          <Title>{isRegistered ? "Sign in" : "Sign Up"}</Title>
-          <Subtitle> Access to your subjects, quiz and source files</Subtitle>
-
-          {isRegistered ? null : (
-            <FormElement>
-              <Icon alt="" src="images/icons/user.svg" />
-              <Input placeholder="First name"></Input>
-            </FormElement>
-          )}
-
-          {isRegistered ? null : (
-            <FormElement>
-              <Icon alt="" src="images/icons/user.svg" />
-              <Input placeholder="Last name"></Input>
-            </FormElement>
-          )}
+          <Title>Set password</Title>
+          <Subtitle>
+            Enter the email address associated to your TakeAnyDoubt account. We
+            will send you a link to set your password.
+          </Subtitle>
 
           <FormElement>
             <Icon alt="" src="images/icons/email.svg" />
             <Input placeholder="Email address"></Input>
           </FormElement>
 
-          <FormElement>
-            <Icon alt="" src="images/icons/lock.svg" />
-            <Input placeholder="Password"></Input>
-          </FormElement>
-
-          <SignUpButton>{isRegistered ? " Sign In" : "Sign Up"}</SignUpButton>
+          <SignUpButton>Set password</SignUpButton>
           <Description>
-            {isRegistered
-              ? "Don't have an account?"
-              : "By clicking on Sign up, you agree to our Terms of service and Privacy policy."}
-            <Link to={isRegistered ? "/signup" : "/signin"}>
-              {isRegistered ? " Sign up" : null}
-            </Link>
-            {/* {register ? <Register /> : <Login />} */}
-          </Description>
-          <Description>
-            {isRegistered ? "Forgot password? " : "Already have an account"}
-            <Link to={isRegistered ? "/reset" : "/signin"}>
-              {isRegistered ? " Reset password" : " Sign in"}
-            </Link>
+            <Link to="/signin">Sign in</Link>
           </Description>
         </FormGroup>
       </MyForm>
@@ -97,20 +64,21 @@ const Subtitle = styled.p`
   font-weight: normal;
   font-size: 15px;
   color: white;
+  line-height: 180%;
   @media (max-width: 640px) {
     font-size: 12px;
   }
 `
 const FormGroup = styled.div`
   width: 320px;
-  height: 488.5px;
+  height: 388.5px;
   display: grid;
   grid-gap: 1px;
   color: white;
   margin: 50px 0 0px 0;
   @media (max-width: 640px) {
     width: 300px;
-    height: 440px;
+    height: 380px;
   }
 `
 

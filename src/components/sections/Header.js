@@ -2,11 +2,15 @@ import { Link } from "gatsby"
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { menoData, mobileData } from "../../data/MenuData"
+import { window } from "browser-monads"
 
 function Laptop() {
   return (
     <Wrapper>
-      <img width="60px" alt="logo" src="/images/icons/tad.svg" />
+      <Link to="/">
+        <Title>TakeAnyDoubt</Title>
+      </Link>
+      {/* <img width="60px" alt="logo" src="/images/icons/tad.svg" /> */}
       <MenuWaWrapper>
         {menoData.map((item, index) => (
           <Link to={item.link} key={index}>
@@ -52,12 +56,24 @@ function Mobile() {
 
 export default function Header() {
   const [isMobile, setIsMobile] = useState(
-    window.matchMedia("(max-width:640px)").matches
+    window.matchMedia("(max-width:1234px)").matches
   )
 
   useEffect(() => {
     window.addEventListener("resize", () => {
       setIsMobile(window.matchMedia("(max-width:640px)").matches)
+    })
+  })
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setIsMobile(window.matchMedia("(max-width:720px)").matches)
+    })
+  })
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setIsMobile(window.matchMedia("(max-width:1234px)").matches)
     })
   })
 
@@ -73,7 +89,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 44px auto;
   justify-content: space-between;
-  padding: 0 30px;
+  padding: 40px 30px;
   align-items: center;
 `
 const MenuWaWrapper = styled.div`
@@ -105,7 +121,7 @@ const MobileMenu = styled.div`
   right: 100px; */
 `
 const ButtonMobile = styled.button`
-  position: fixed;
+  position: absolute;
   left: 310px;
   top: 10px;
   background: rgba(15, 14, 71, 0.3);
@@ -143,7 +159,21 @@ const MenuItemMobile = styled.div`
   font-weight: 400;
   width: 180px;
   height: 50px;
+
   display: grid;
   grid-template-columns: 1px auto;
   align-items: center;
+`
+
+const Title = styled.h2`
+  margin: 20px;
+  text-align: center;
+  padding: 10px;
+  width: 134px;
+  height: 44px;
+  background: linear-gradient(200.44deg, #4316db 13.57%, #9076e7 98.38%);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: white;
 `

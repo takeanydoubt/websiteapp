@@ -7,12 +7,10 @@ import PricingSection from "../components/sections/PricingSection"
 import EdgeHero from "../components/sections/EdgeHero"
 import PricingHeading from "../components/sections/PricingHeading"
 import HeroProfile from "../components/sections/HeroProfile"
-import Header from "../components/sections/Header"
-
+import { window } from "browser-monads"
 const MainLayout = () => {
   return (
     <Layout>
-      <Header />
       <SEO title="home" />
       <HeroSection />
       <SemiHeroSection />
@@ -26,7 +24,6 @@ const MainLayout = () => {
 const MainLayout2 = () => {
   return (
     <Layout>
-      <Header />
       <SEO title="home" />
       <HeroSection />
       <SemiHeroSection />
@@ -46,6 +43,18 @@ function IndexPage() {
   useEffect(() => {
     window.addEventListener("resize", () => {
       setMobile(window.matchMedia("(max-width:640px)").matches)
+    })
+  })
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setMobile(window.matchMedia("(max-width:720px)").matches)
+    })
+  })
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setMobile(window.matchMedia("(max-width:1234px)").matches)
     })
   })
 

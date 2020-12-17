@@ -1,14 +1,16 @@
 import React from "react"
-import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
-
+import Footer from "../components/sections/Footer"
+import { GlobalStyle } from "../components/styles/GlobalStyle"
 
 function Tutoring() {
   return (
-    <Layout>
+    <>
+      <GlobalStyle />
       <SEO title="tutoring" />
       <h1>Tutoring</h1>
-    </Layout>
+      <Footer />
+    </>
   )
 }
 
