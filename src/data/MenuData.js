@@ -2,7 +2,7 @@ export const menoData = [
   { title: "Content", icon: "/images/icons/courses.svg", link: "/upcoming" },
   { title: "Tutoring", icon: "/images/icons/tutorials.svg", link: "/upcoming" },
   { title: "Pricing", icon: "/images/icons/credit.svg", link: "/pricing" },
-  { title: "Login", icon: "/images/icons/account.svg", link: "/signin" },
+  { title: "", icon: "/images/icons/account.svg", link: "/signin" },
 ]
 
 export const mobileData = [

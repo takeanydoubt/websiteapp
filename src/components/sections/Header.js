@@ -1,8 +1,8 @@
 import { Link } from "gatsby"
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { menoData, mobileData } from "../../data/MenuData"
-import { window } from "browser-monads"
+// import { window } from "browser-monads"
 
 function Laptop() {
   return (
@@ -21,6 +21,7 @@ function Laptop() {
           </Link>
         ))}
       </MenuWaWrapper>
+      <Mobile />
     </Wrapper>
   )
 }
@@ -43,9 +44,14 @@ const MobileList = () => {
 function Mobile() {
   const [active, setActive] = useState(false)
 
+  function HandleClick(event) {
+    setActive(!active)
+    // event.preventDefault()
+  }
+
   return (
     <MobileMenu>
-      <ButtonMobile onClick={() => setActive(!active)}>
+      <ButtonMobile onClick={event => HandleClick(event)}>
         {active ? "" : ""}
         <img alt="" src="/images/icons/hamburger.svg" />
         {active && <MobileList />}
@@ -55,29 +61,19 @@ function Mobile() {
 }
 
 export default function Header() {
-  const [isMobile, setIsMobile] = useState(
-    window.matchMedia("(max-width:1234px)").matches
-  )
+  return <Laptop />
 
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setIsMobile(window.matchMedia("(max-width:640px)").matches)
-    })
-  })
+  // const [isMobile, setIsMobile] = useState(
+  //   window.matchMedia("(max-width:640px)").matches
+  // )
 
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setIsMobile(window.matchMedia("(max-width:720px)").matches)
-    })
-  })
+  // useEffect(() => {
+  //   window.addEventListener("resize", () => {
+  //     setIsMobile(window.matchMedia("(max-width:640px)").matches)
+  //   })
+  // })
 
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setIsMobile(window.matchMedia("(max-width:1234px)").matches)
-    })
-  })
-
-  return <>{isMobile ? <Mobile /> : <Laptop />}</>
+  // return <>{isMobile ? <Mobile /> : <Laptop />}</>
 }
 
 // ****************** Header ************************************************//
@@ -95,7 +91,33 @@ const MenuWaWrapper = styled.div`
   display: grid;
   gap: 30px;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, auto);
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(3, auto);
+
+    a {
+      :nth-child(1) {
+        display: none;
+      }
+    }
+
+    a {
+      :nth-child(2) {
+        display: none;
+      }
+    }
+    a {
+      :nth-child(3) {
+        display: none;
+      }
+    }
+    a {
+      :nth-child(4) {
+        display: none;
+      }
+    }
+  }
 `
 
 const MenuItem = styled.div`
@@ -115,6 +137,10 @@ const MenuItem = styled.div`
       inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.2);
     border-radius: 10px;
   }
+
+  @media (max-width: 640px) {
+    padding: 15px 0;
+  }
 `
 
 // ****************** Mobile ************************************************//
@@ -123,8 +149,8 @@ const MobileMenu = styled.div`
 `
 const ButtonMobile = styled.button`
   position: absolute;
-  top: 0px;
-  right: 0;
+  top: 60px;
+  right: 0px;
   background: rgba(15, 14, 71, 0.3);
   box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset;
   backdrop-filter: blur(40px);
