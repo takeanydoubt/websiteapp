@@ -23,7 +23,7 @@ function HeroSection() {
             </Description>
             <PurchaseButton
               title="Start Learning"
-              subtitle="120 + hours of video"
+              subtitle="Online + In-pernson class"
             />
 
             <Descript>
@@ -43,8 +43,6 @@ export default HeroSection
 
 const WrapperWave = styled.div`
   width: 100%;
-  /* height: 100%; */
-  /* background: linear-gradient(180deg, #4316db 0%, #9076e7 100%); */
   background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
 `
 const Wrapper = styled.div`

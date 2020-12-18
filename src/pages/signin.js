@@ -23,10 +23,11 @@ export default Signin
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  background: url("/images/waves/certificate-wave1.svg");
+  background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
 `
 const ContentWrapper = styled.div`
-  max-width: 1234px;
+  background: url("/images/waves/certificate-wave1.svg");
+  /* max-width: 1234px; */
   margin: 0 auto;
-  padding: 100px 30px;
+  padding: 120px 0px;
 `

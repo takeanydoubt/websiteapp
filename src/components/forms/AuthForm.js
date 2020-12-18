@@ -17,14 +17,14 @@ export default function AuthForm(props) {
 
           {isRegistered ? null : (
             <FormElement>
-              <Icon alt="" src="images/icons/user.svg" />
+              <Icon alt="" src="images/icons/user-profile.svg" />
               <Input placeholder="First name"></Input>
             </FormElement>
           )}
 
           {isRegistered ? null : (
             <FormElement>
-              <Icon alt="" src="images/icons/user.svg" />
+              <Icon alt="" src="images/icons/user-profile.svg" />
               <Input placeholder="Last name"></Input>
             </FormElement>
           )}

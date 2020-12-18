@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import TutorContextProvider from "../../context/TutorContext"
+import { themes } from "../styles/ColorStyles"
 import TutorCard from "./TutorCard"
 const HeroProfile = () => {
   return (
@@ -36,16 +37,14 @@ const GroupCard = styled.div`
     grid-template-columns: repeat(1, 1fr);
   }
 `
-const Heading = styled.p`
+const Heading = styled.h1`
   font-family: SF Pro Display;
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
   line-height: 48px;
-  /* identical to box height */
   text-align: center;
-  /* Text (dark) */
-  color: #ffffff;
+  color: ${themes.light.text2};
   mix-blend-mode: normal;
 `
 const HeadingSmall = styled.p`
@@ -53,9 +52,8 @@ const HeadingSmall = styled.p`
   font-size: 15px;
   line-height: 130%;
   text-align: center;
-  /* or 19px */
   text-transform: uppercase;
-  /* Text 2 */
+  color: ${themes.light.text2};
 `
 const HeadingDescription = styled.p`
   margin: 0 auto;
@@ -64,6 +62,5 @@ const HeadingDescription = styled.p`
   font-weight: normal;
   font-size: 17px;
   line-height: 130%;
-  /* or 22px */
-  color: rgba(255, 255, 255, 0.7);
+  color: ${themes.light.text2};
 `

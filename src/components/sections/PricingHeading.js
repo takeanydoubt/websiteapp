@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { themes } from "../styles/ColorStyles"
 
 const PricingHeading = () => {
   return (
@@ -28,14 +29,13 @@ const Title = styled.h1`
   font-size: 40px;
   line-height: 48px;
   text-align: center;
-  color: #ffffff;
+  color: ${themes.light.text2};
 `
 const Content = styled.p`
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
   line-height: 130%;
-  /* or 22px */
   text-align: center;
   max-width: 460px;
   text-align: center;
@@ -44,6 +44,6 @@ const Content = styled.p`
   display: grid;
   gap: 20px;
   z-index: 1;
-  color: white;
+  color: ${themes.light.text2};
   mix-blend-mode: normal;
 `

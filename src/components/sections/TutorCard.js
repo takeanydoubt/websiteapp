@@ -10,7 +10,7 @@ const TutorCard = () => {
         <ProfileCard>
           <ProfileDescription>
             <Content>
-              <img alt="" src="/images/icons/eurico.jpeg" />
+              <img alt="" src="/images/avatars/chris.png" />
               <Title>{tutor.title}</Title>
               <Position>{tutor.position}</Position>
               <Description>

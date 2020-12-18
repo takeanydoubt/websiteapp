@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import Render from "./Render"
+import SelectButton from "../buttons/SelectButton"
 
 function PricingSection() {
   return (
     <Hero>
-      <Render firstButton="Online" secondButton="Personal" />
+      <SelectButton firstButton="Online" secondButton="Personal" />
 
       <CardHero>
         <DailyCard>
@@ -81,16 +81,18 @@ function PricingSection() {
 
 export default PricingSection
 
-const Hero = styled.div``
+const Hero = styled.div`
+  margin: 0 auto;
+`
 const CardHero = styled.div`
-  padding: 60px 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
 
   @media (max-width: 640px) {
     grid-template-columns: repeat(1, 1fr);
-    margin-left: 0px;
-    grid-gap: 40px;
+    margin-right: 50px;
+    gap: 40px;
   }
 `
 const DailyCard = styled.div`
@@ -105,7 +107,6 @@ const DailyCard = styled.div`
   box-sizing: border-box;
   box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(40px);
-  /* Note: backdrop-filter has minimal browser support */
   border-radius: 0px 60px 60px 60px;
 
   @media (max-width: 640px) {

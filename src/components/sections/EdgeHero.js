@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import PricingButton from "../buttons/PricingButton"
+import PurchaseButton from "../buttons/PurchaseButton"
+import { themes } from "../styles/ColorStyles"
 const EdgeHero = () => {
   return (
     <Hero>
@@ -53,8 +54,9 @@ const EdgeHero = () => {
           </Paragraph>
         </WrapperText>
       </HeroGroup>
-
-      <PricingButton />
+      <Positio>
+        <PurchaseButton />
+      </Positio>
     </Hero>
   )
 }
@@ -63,10 +65,10 @@ export default EdgeHero
 
 const Hero = styled.div`
   margin: 0 auto 0 auto;
-  padding: 100px 30px;
+  padding: 6px 30px;
   display: grid;
   grid-gap: 30px;
-  background: url("/images/waves/hero-wave2.svg");
+  background: url("/images/waves/hero-wave1.svg");
 `
 const HeroGroup = styled.div`
   display: grid;
@@ -80,7 +82,7 @@ const HeroGroup = styled.div`
 const Title = styled.h1`
   margin: 0;
   font-weight: 700;
-  color: azure;
+  color: ${themes.light.text2};
   font-size: 34px;
   text-align: center;
 
@@ -101,7 +103,7 @@ const Heading = styled.h3`
   font-size: 22px;
   line-height: 27px;
   font-weight: 600px;
-  color: azure;
+  color: ${themes.light.text2};
   margin-bottom: 8px;
 
   @media (max-width: 640px) {
@@ -110,9 +112,13 @@ const Heading = styled.h3`
 `
 const Paragraph = styled.p`
   font-size: 15px;
-  color: white;
+  color: ${themes.light.text2};
   line-height: 23px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 300px;
+`
+const Positio = styled.div`
+  display: grid;
+  justify-content: center;
 `

@@ -1,14 +1,14 @@
 export const menoData = [
-  { title: "Content", icon: "/images/icons/courses.svg", link: "/course" },
-  { title: "Tutoring", icon: "/images/icons/tutorials.svg", link: "/tutorin" },
+  { title: "Content", icon: "/images/icons/courses.svg", link: "/upcoming" },
+  { title: "Tutoring", icon: "/images/icons/tutorials.svg", link: "/upcoming" },
   { title: "Pricing", icon: "/images/icons/credit.svg", link: "/pricing" },
-  { title: "Sign in", icon: "/images/icons/account.svg", link: "/signin" },
+  { title: "Login", icon: "/images/icons/account.svg", link: "/signin" },
 ]
 
 export const mobileData = [
-  { title: "Content", icon: "/images/icons/file.svg", link: "/content" },
+  { title: "Content", icon: "/images/icons/file.svg", link: "/upcoming" },
   { title: "Pricing", icon: "/images/icons/credit.svg", link: "/pricing" },
-  { title: "Tutoring", icon: "/images/icons/tutorials.svg", link: "/tutoring" },
+  { title: "Tutoring", icon: "/images/icons/tutorials.svg", link: "/upcoming" },
   { title: "Subject", icon: "/images/icons/courses.svg", link: "/subject" },
   { title: "Sign in", icon: "/images/icons/signout.svg", link: "/signin" },
 ]
@@ -22,7 +22,7 @@ export const footerData = [
   {
     title: "Account",
     icon: "/images/icons/account.svg",
-    link: "/account",
+    link: "/upcoming",
   },
   {
     title: "Log in",
@@ -55,7 +55,7 @@ export const footerData = [
   {
     title: "HelpMe",
     icon: "/images/icons/help.svg",
-    link: "/help",
+    link: "/upcoming",
   },
   {
     title: "Tutors",
@@ -66,6 +66,6 @@ export const footerData = [
   {
     title: "Founders",
     icon: "/images/icons/profile.svg",
-    link: "/founder",
+    link: "/upcoming",
   },
 ]

@@ -17,7 +17,8 @@ const Tutors = () => {
           <Title>Online Tutors</Title>
           <Description>Connect with an online tutor instantly</Description>
           <Paragraph>
-            Special Offer: 30 minutes of free tutoring for all new students!
+            Special Offer: you can order a tutor to your home by choosing the
+            package in person class!
           </Paragraph>
         </WrapText>
         <GroupCard>
@@ -39,7 +40,8 @@ export default Tutors
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+
+  background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
 `
 const GroupCard = styled.div`
   padding-bottom: 80px;

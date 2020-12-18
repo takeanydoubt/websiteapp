@@ -6,36 +6,37 @@ const TutorForm = () => {
     <Wrapper>
       <FormWrapper>
         <Profile></Profile>
-        <Form>
+        <Form
+          name="application"
+          className="form"
+          action="/contact"
+          method="post"
+        >
+          <input type="hidden" name="form-name" value="application" />
           <Field>
             <Label>First name</Label>
-            <Input />
+            <Input required maxLength="20" type="name" />
           </Field>
-
           <Field>
             <Label>Last name</Label>
-            <Input />
+            <Input required maxLength="20" type="surname" />
           </Field>
-
           <Field>
             <Label>Email address</Label>
-            <Input />
+            <Input required maxLength="30" type="email" />
           </Field>
-
           <Field>
             <Label>Date of Birth</Label>
-            <Input type="date" id="birthday" name="birthday" />
+            <Input required type="date" id="birthday" name="birthday" />
           </Field>
-
           <Field>
             <Label>Country of Birth</Label>
-            <Input />
+            <Input required maxLength="20" type="country" />
           </Field>
           <Field>
             <Label>Phone Number</Label>
-            <Input />
+            <Input required maxLength="20" type="phone" />
           </Field>
-
           <Field>
             <Label>Occupation</Label>
             <select>
@@ -47,7 +48,6 @@ const TutorForm = () => {
               <option>Employee</option>
             </select>
           </Field>
-
           <Field>
             <Label role="button">Subject of Interest</Label>
             <select>
@@ -75,7 +75,6 @@ const TutorForm = () => {
               <option value="uj">University of Johanesburg</option>
             </select>
           </Field>
-
           <Field>
             <Label>Gender</Label>
             <select>
@@ -84,7 +83,6 @@ const TutorForm = () => {
               <option velue="female">Female</option>
             </select>
           </Field>
-
           <Field>
             <Label>Tutoring Preference</Label>
             <select>
@@ -93,14 +91,13 @@ const TutorForm = () => {
               <option velue="female">In Person</option>
             </select>
           </Field>
-
           <Field>
             <Label>Profile Photo</Label>
             <InputUpload type="file" id="myfile" name="myfile" />
           </Field>
-        </Form>
 
-        <ApplyButton>Apply</ApplyButton>
+          <ApplyButton ty="submit">Apply</ApplyButton>
+        </Form>
       </FormWrapper>
     </Wrapper>
   )
@@ -117,7 +114,7 @@ const FormWrapper = styled.div`
   padding: 40px 0;
 `
 
-const Form = styled.div`
+const Form = styled.form`
   display: grid;
   grid-template-columns: 350px 350px;
   justify-content: center;

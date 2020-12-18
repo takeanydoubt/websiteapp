@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { themes } from "../styles/ColorStyles"
 import SemiHeroCard from "./SemiHeroCard"
 
 const SemiHeroSection = () => {
@@ -80,7 +81,7 @@ const TextWrapper = styled.div`
 
 const Title = styled.h1`
   font-weight: 700;
-  color: azure;
+  color: ${themes.light.text2};
   font-size: 34px;
   text-align: center;
 
@@ -94,14 +95,14 @@ const Description = styled.div`
   grid-gap: 40px;
 `
 const Heading = styled.h3`
-  color: white;
+  color: ${themes.light.text2};
   font-size: 30px;
   text-align: center;
 `
 const Paragraph = styled.p`
   width: 20rem;
   font-size: 15px;
-  color: white;
+  color: ${themes.light.text2};
   line-height: 23px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -13,8 +13,8 @@ const PurchaseButton = props => {
           <Icon src="images/icons/credit.svg" />
         </IconWrapper>
         <TextWrapper>
-          <Title>{title || "Purshace a Course"}</Title>
-          <Subtitle>{subtitle || "Buy Your course today"}</Subtitle>
+          <Title>{title || "Purshace a Subject"}</Title>
+          <Subtitle>{subtitle || "Buy Your subject today"}</Subtitle>
         </TextWrapper>
       </Wrapper>
     </Link>

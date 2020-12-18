@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const Render = props => {
+const SelectButton = props => {
   return (
     <ButtonGroup>
       <Text1> {props.firstButton}</Text1>
@@ -10,14 +10,14 @@ const Render = props => {
     </ButtonGroup>
   )
 }
-export default Render
+export default SelectButton
 
 const ButtonGroup = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
   width: 213px;
-  height: 43px;
+  height: 50px;
 
   background: linear-gradient(
     180deg,
@@ -38,14 +38,14 @@ const Text1 = styled.p`
   border-radius: 30px;
   text-align: center;
   cursor: pointer;
-  margin-top: 2px;
+  margin-top: 5px;
   margin-left: 7.5px;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 130%;
   background: #ffffff;
-  /* or 19px */
+  padding: 10px;
 
   text-align: center;
 `
@@ -57,12 +57,12 @@ const Text2 = styled.p`
   text-align: center;
   cursor: pointer;
   color: white;
-  margin-top: 10px;
+  margin-top: 5px;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 130%;
-  /* or 19px */
-
   text-align: center;
+  background: transparent;
+  padding: 10px;
 `

@@ -32,7 +32,7 @@ const WrapperHero = styled.div`
   margin: 200px 0 0 0;
   width: 100%;
   background: url("/images/waves/footer-wave3.svg");
-  padding: 8%;
+  padding: 10%;
 `
 
 const Wrapper = styled.div`
@@ -41,11 +41,11 @@ const Wrapper = styled.div`
   width: 660px;
   height: 300px;
   margin: 20px auto;
-  background: #16145a;
+  /* background: #16145a; */
   @media (max-width: 640px) {
     margin: 80px auto;
     width: 300px;
-    height: 350px;
+    height: 450px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }

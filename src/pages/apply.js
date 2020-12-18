@@ -1,9 +1,9 @@
 import React from "react"
-import ApplySection from "../components/ApplySection"
 import SEO from "../components/layout/seo"
 import Layout from "../components/layout/layout"
 import styled from "styled-components"
 import Header from "../components/sections/Header"
+import ApplySection from "../components/sections/ApplySection"
 const Apply = () => {
   return (
     <Wrapper>
