@@ -83,7 +83,6 @@ export default function Header() {
 // ****************** Header ************************************************//
 const Wrapper = styled.div`
   position: absolute;
-  /* background: #1f4c70; */
   top: 0px;
   width: 100%;
   display: grid;
@@ -120,13 +119,12 @@ const MenuItem = styled.div`
 
 // ****************** Mobile ************************************************//
 const MobileMenu = styled.div`
-  /* position: relative;
-  right: 100px; */
+  margin: 0 auto;
 `
 const ButtonMobile = styled.button`
   position: absolute;
-  left: 310px;
-  top: 10px;
+  top: 0px;
+  right: 0;
   background: rgba(15, 14, 71, 0.3);
   box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset;
   backdrop-filter: blur(40px);

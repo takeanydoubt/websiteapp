@@ -17,5 +17,5 @@ const TutorApplication = () => {
 export default TutorApplication
 
 const Wrapper = styled.div`
-  background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
+  margin: 0 auto;
 `

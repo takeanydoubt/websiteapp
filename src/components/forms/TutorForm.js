@@ -107,7 +107,8 @@ export default TutorForm
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  background: white;
+  background: linear-gradient(180deg, #ff5775 -3.94%, #1f0a89 56.67%);
+
   /* padding: 160px 0 100px 0; */
 `
 const FormWrapper = styled.div`
@@ -132,7 +133,7 @@ const Field = styled.div`
   }
 `
 const Label = styled.label`
-  color: darkgray;
+  color: rgba(255, 255, 255);
   text-transform: uppercase;
 `
 const Input = styled.input`
@@ -161,16 +162,21 @@ const Profile = styled.div`
 `
 
 const ApplyButton = styled.button`
-  margin: 20px 600px;
-  width: 250px;
+  width: 200px;
   height: 50px;
-  border-radius: 20px;
-  background: green;
+  background: linear-gradient(200.44deg, #4316db 13.57%, #9076e7 98.38%);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
   font-size: 20px;
   color: white;
-  font-weight: 400;
+  font-weight: bold;
   text-align: center;
   text-transform: uppercase;
   outline: none;
   cursor: pointer;
+  display: grid;
+  margin-left: 200px;
+  border: none;
+  padding: 10px;
 `

@@ -17,4 +17,6 @@ const Apply = () => {
 
 export default Apply
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  background: linear-gradient(180deg, #ff5775 -3.94%, #1f0a89 56.67%);
+`

@@ -22,7 +22,7 @@ export default function ApplySection() {
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  background: url("/images/waves/round-wave1.svg");
+  /* background: url("/images/waves/round-wave1.svg"); */
   display: grid;
 `
 const ContentWrapper = styled.div`
