@@ -94,6 +94,15 @@ const CardHero = styled.div`
     margin-right: 50px;
     gap: 40px;
   }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+  }
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+  }
 `
 const DailyCard = styled.div`
   width: 360px;
@@ -110,6 +119,12 @@ const DailyCard = styled.div`
   border-radius: 0px 60px 60px 60px;
 
   @media (max-width: 640px) {
+    margin-left: 20px;
+    width: 335px;
+    height: 426px;
+  }
+
+  @media (max-width: 768px) {
     margin-left: 20px;
     width: 335px;
     height: 426px;
@@ -131,6 +146,11 @@ const WeeklyCard = styled.div`
     width: 335px;
     height: 423px;
   }
+  @media (max-width: 768px) {
+    margin-left: 20px;
+    width: 335px;
+    height: 426px;
+  }
 `
 const MontlyCard = styled.div`
   width: 380px;
@@ -146,6 +166,12 @@ const MontlyCard = styled.div`
     margin-left: 20px;
     width: 335px;
     height: 519px;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 20px;
+    width: 335px;
+    height: 426px;
   }
 `
 const Title = styled.h1`

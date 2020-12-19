@@ -16,8 +16,10 @@ const SearchBar = () => {
 export default SearchBar
 
 const Wrapper = styled.div`
-  /* margin-right: 200px; */
   padding: 180px 30px;
+
+  @media (max-width: 768px) {
+  }
 
   @media (max-width: 640px) {
     margin: 0 0px 0 0;
@@ -34,6 +36,17 @@ const Input = styled.input`
   outline: none;
   border: none;
   cursor: text;
+  @media (max-width: 1024px) {
+    width: 260px;
+    height: 44px;
+    font-size: 10px;
+  }
+  @media (max-width: 768px) {
+    width: 260px;
+    height: 44px;
+    font-size: 10px;
+  }
+
   @media (max-width: 640px) {
     width: 260px;
     height: 44px;
@@ -49,6 +62,14 @@ const GroupWrapper = styled.div`
   position: relative;
 
   @media (max-width: 640px) {
+    width: 260px;
+    height: 46px;
+  }
+  @media (max-width: 768px) {
+    width: 260px;
+    height: 46px;
+  }
+  @media (max-width: 1024px) {
     width: 260px;
     height: 46px;
   }

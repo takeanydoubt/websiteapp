@@ -33,6 +33,9 @@ const WrapperHero = styled.div`
   width: 100%;
   background: url("/images/waves/footer-wave3.svg");
   padding: 10%;
+  @media (max-width: 640px) {
+    padding: 4%;
+  }
 `
 
 const Wrapper = styled.div`
@@ -53,8 +56,6 @@ const Wrapper = styled.div`
 const WrapperItems = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  @media (max-width: 640px) {
-  }
 `
 const WrapperText = styled.div`
   margin: 20px auto;

@@ -146,7 +146,7 @@ const ButtonMobile = styled.button`
   border-radius: 90px;
   border: none;
   outline: none;
-
+  /* */
   img {
     border-style: none;
     width: 30px;
@@ -154,6 +154,9 @@ const ButtonMobile = styled.button`
   }
 
   @media (min-width: 769px) {
+    display: none;
+  }
+  @media (min-width: 768px) {
     display: none;
   }
 `
