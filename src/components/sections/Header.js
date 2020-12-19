@@ -2,7 +2,6 @@ import { Link } from "gatsby"
 import React, { useState } from "react"
 import styled from "styled-components"
 import { menoData, mobileData } from "../../data/MenuData"
-// import { window } from "browser-monads"
 
 function Laptop() {
   return (
@@ -10,7 +9,7 @@ function Laptop() {
       <Link to="/">
         <Title>TakeAnyDoubt</Title>
       </Link>
-      {/* <img width="60px" alt="logo" src="/images/icons/tad.svg" /> */}
+
       <MenuWaWrapper>
         {menoData.map((item, index) => (
           <Link to={item.link} key={index}>
@@ -46,7 +45,7 @@ function Mobile() {
 
   function HandleClick(event) {
     setActive(!active)
-    // event.preventDefault()
+    event.preventDefault()
   }
 
   return (
@@ -62,18 +61,6 @@ function Mobile() {
 
 export default function Header() {
   return <Laptop />
-
-  // const [isMobile, setIsMobile] = useState(
-  //   window.matchMedia("(max-width:640px)").matches
-  // )
-
-  // useEffect(() => {
-  //   window.addEventListener("resize", () => {
-  //     setIsMobile(window.matchMedia("(max-width:640px)").matches)
-  //   })
-  // })
-
-  // return <>{isMobile ? <Mobile /> : <Laptop />}</>
 }
 
 // ****************** Header ************************************************//
@@ -149,8 +136,8 @@ const MobileMenu = styled.div`
 `
 const ButtonMobile = styled.button`
   position: absolute;
-  top: 60px;
-  right: 0px;
+  top: 55px;
+  right: 10px;
   background: rgba(15, 14, 71, 0.3);
   box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset;
   backdrop-filter: blur(40px);
@@ -159,19 +146,24 @@ const ButtonMobile = styled.button`
   border-radius: 90px;
   border: none;
   outline: none;
+
   img {
     border-style: none;
     width: 30px;
     height: 30px;
   }
+
+  @media (min-width: 769px) {
+    display: none;
+  }
 `
 
 const MobileHero = styled.div`
   position: absolute;
-  right: 1px;
+  right: 18px;
   top: 63px;
-  width: 220px;
-  height: 350px;
+  width: 250px;
+  height: 380px;
   background: #16145a;
   box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.25),
     inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.2);
@@ -179,17 +171,32 @@ const MobileHero = styled.div`
   border-radius: 20px;
 `
 const MenuItemMobile = styled.div`
-  margin: 0 auto;
-  padding: 12px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 400;
-  width: 180px;
-  height: 50px;
-
+  width: 200px;
+  margin: 20px auto;
   display: grid;
-  grid-template-columns: 1px auto;
+  grid-template-columns: 24px auto;
+  justify-content: center;
   align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+  color: white;
+  border-bottom: 1px;
+  border-color: rgba(255, 255, 255, 0.1);
+  border-style: solid;
+
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 130%;
+  text-align: center;
+
+  :hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1),
+      inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
 `
 
 const Title = styled.h2`
