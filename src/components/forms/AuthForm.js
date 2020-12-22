@@ -76,6 +76,7 @@ const Wrapper = styled.div`
   z-index: 1;
 
   @media (max-width: 640px) {
+    margin: 20px auto;
     width: 320px;
     height: 510px;
   }
@@ -83,6 +84,10 @@ const Wrapper = styled.div`
 
 const MyForm = styled.div`
   margin: 20px auto;
+
+  @media (max-width: 640px) {
+    margin: -20px auto;
+  }
 `
 const Title = styled.h1`
   color: white;
@@ -110,7 +115,7 @@ const FormGroup = styled.div`
   margin: 50px 0 0px 0;
   @media (max-width: 640px) {
     width: 300px;
-    height: 440px;
+    height: 400px;
   }
 `
 

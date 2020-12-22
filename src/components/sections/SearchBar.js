@@ -1,14 +1,54 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
+
 const SearchBar = () => {
+  const [input, setInput] = useState("")
+  const [visible, setVisible] = useState(false)
+
+  let subjects = [
+    { name: "Engineering Mathematics", course: "Mechanical Engineering" },
+    { name: "Construtation", course: "Civil Engineering" },
+    { name: "Programming", course: "Computer Systems Engineering" },
+    { name: "Electrinics ", course: "Eletrical Engineering" },
+    { name: "Data Analytics", course: "Computer Science" },
+  ]
+
+  function handleChange(event) {
+    event.preventDefault()
+    setInput(event.target.value)
+  }
+
+  if (input.length > 0) {
+    subjects = subjects.filter(i => {
+      return i.name.match(input)
+    })
+  }
+
   return (
     <Wrapper>
       <GroupWrapper>
-        <Input placeholder="What subject do you need help with?(e.g. 'Calculs') "></Input>
+        <Input
+          type="text"
+          placeholder="What subject do you need help with?(e.g. 'Calculs') "
+          onChange={handleChange}
+          value={input}
+          onClick={() => setVisible(!visible)}
+        />
+
         <IconWrapper>
           <Icon src="images/icons/search.svg" />
         </IconWrapper>
       </GroupWrapper>
+
+      {visible ? (
+        <WrapperHero>
+          {subjects.map((subject, index) => (
+            <Text key={index}>
+              {subject.name} -{subject.course}
+            </Text>
+          ))}
+        </WrapperHero>
+      ) : null}
     </Wrapper>
   )
 }
@@ -91,4 +131,15 @@ const IconWrapper = styled.div`
   position: absolute;
   top: 3px;
   left: 5px;
+`
+
+const WrapperHero = styled.div`
+  width: 570px;
+  height: 300px;
+  background: rgb(255, 255, 255, 0.7);
+  border-radius: 30px;
+`
+const Text = styled.p`
+  display: grid;
+  padding: 30px 0 0 20px;
 `
