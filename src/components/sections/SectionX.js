@@ -46,8 +46,8 @@ const SubTitle = styled(H3)`
 const ApplyButton = styled.button`
   display: grid;
   margin: 0 auto;
-  width: 280px;
-  height: 77px;
+  width: 200px;
+  height: 60px;
   padding: 12px;
   background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%);
   box-shadow: 0px 20px 40px rgba(147, 231, 221, 0.3);
