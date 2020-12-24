@@ -8,12 +8,12 @@ const TeamSection = () => {
       <TeamCard
         icon="images/avatars/celso.jpg"
         title="Celso Adriano"
-        role="CEO and Founder"
+        role="CEO & Founder"
       />
       <TeamCard
         icon="images/avatars/alberto.jpg"
         title="Alberto Almeida"
-        role="Chief Product Officer"
+        role="CPO & Founder"
       />
     </Wrapper>
   )
