@@ -8,10 +8,7 @@ export default function SectionX() {
     <Wrapper>
       <ContentWrapper>
         <Title>Comming Soon</Title>
-        <SubTitle>
-          {" "}
-          This page is not available yet, will be available soon.
-        </SubTitle>
+        <SubTitle> This page is not available yet.</SubTitle>
 
         <Link to="/tutor-application">
           <ApplyButton>Apply Now</ApplyButton>
@@ -31,12 +28,20 @@ const ContentWrapper = styled.div`
 const Title = styled(H2)`
   color: white;
   text-align: center;
-  padding: 40px 0;
+  padding: 40px 0 0 0;
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+  }
 `
 const SubTitle = styled(H3)`
   text-align: center;
   color: white;
   padding: 40px 0;
+
+  @media (max-width: 640px) {
+    font-size: 22px;
+  }
 `
 const ApplyButton = styled.button`
   display: grid;
@@ -59,5 +64,11 @@ const ApplyButton = styled.button`
 
   :hover {
     transform: translateY(-4px);
+  }
+
+  @media (max-width: 640px) {
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
   }
 `
