@@ -1161,12 +1161,16 @@ const WrapperButton = styled.div`
   justify-content: center;
   gap: 30px;
 
-  @media (max-width: 640px) {
-    grid-template-columns: 300px;
-  }
   @media (max-width: 768px) {
     grid-template-columns: 200px 200px 200px;
     gap: 40px;
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 300px;
+    margin-left: 60px;
+    gap: 10px;
+  }
   }
 `
 const Button = styled.div`
