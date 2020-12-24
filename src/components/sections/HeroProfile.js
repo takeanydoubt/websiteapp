@@ -36,6 +36,9 @@ const GroupCard = styled.div`
   @media (max-width: 640px) {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  @media (max-width: 768px) {
+  }
 `
 const Heading = styled.h1`
   font-family: SF Pro Display;

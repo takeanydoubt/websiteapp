@@ -30,7 +30,7 @@ export const footerData = [
     link: "/signin",
   },
   {
-    title: "Subject",
+    title: "Subjects",
     icon: "/images/icons/courses.svg",
     link: "/subject",
   },
@@ -53,9 +53,9 @@ export const footerData = [
   },
 
   {
-    title: "HelpMe",
+    title: "Policy",
     icon: "/images/icons/help.svg",
-    link: "/upcoming",
+    link: "/privacy",
   },
   {
     title: "Tutors",
@@ -64,8 +64,8 @@ export const footerData = [
   },
 
   {
-    title: "Founders",
+    title: "Team",
     icon: "/images/icons/profile.svg",
-    link: "/upcoming",
+    link: "/team",
   },
 ]

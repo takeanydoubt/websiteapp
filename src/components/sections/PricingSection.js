@@ -227,4 +227,11 @@ const Button = styled.button`
     margin: 0 8px -6px 10px;
     border-style: none;
   }
+
+  @media (max-width: 640px) {
+    margin: 20px 0px 0 100px;
+  }
+  @media (max-width: 768px) {
+    margin: 20px 0px 0 100px;
+  }
 `

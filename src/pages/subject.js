@@ -2,65 +2,91 @@ import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout/layout"
-import Header from "../components/sections/Header"
+import SEO from "../components/layout/seo"
 import { H3 } from "../components/styles/TextStyles"
 import { engineeringData, scienceData } from "../data/SubjectData"
 const Subject = () => {
   return (
     <Wrapper>
-      <Header />
-
-      <TextWrapper>
+      <SEO title="subject" />
+      <Layout>
         <Title>All TakeAnyDoubt Subjects</Title>
-
-        <Subtitle>Engineering</Subtitle>
-        <List>
-          {engineeringData.map((item, index) => (
-            <Link to={item.link} key={index}>
-              {item.title}
+        <Category>
+          <Engineering>
+            <Link style={{ fontSize: "24px", color: "white" }} to="">
+              Engineering
             </Link>
-          ))}
-        </List>
-        <Subtitle>Science</Subtitle>
-        <List>
-          {scienceData.map((item, index) => (
-            <Link to={item.link} key={index}>
-              {item.title}
-            </Link>
-          ))}
-        </List>
-      </TextWrapper>
-      <Layout />
+            <Rows>
+              {engineeringData.map(item => (
+                <Link key={item} to={item.link}>
+                  {item.title}
+                </Link>
+              ))}
+            </Rows>
+          </Engineering>
+          <Science>
+            <Link style={{ fontSize: "24px", color: "White" }}>Science</Link>
+            <Rows>
+              {scienceData.map(item => (
+                <Link key={item} to={item.link} to="">
+                  {item.title}
+                </Link>
+              ))}
+            </Rows>
+          </Science>
+        </Category>
+      </Layout>
     </Wrapper>
   )
 }
 
 export default Subject
 
-const Wrapper = styled.div``
-const TextWrapper = styled.div`
-  margin: 0 auto;
-  padding: 150px 0;
+const Wrapper = styled.div`
+  background: linear-gradient(180deg, #ff5775 -3.94%, #1f0a89 56.67%);
 `
-const Title = styled.h1`
-  text-align: center;
-  font-size: 30px;
-  font-weight: 400;
-  color: rgb(255, 255, 255, 0.6);
-`
-const Subtitle = styled(H3)`
-  margin: 60px 0 30px 280px;
-  color: rgb(0, 0, 0, 0.5);
-`
-const List = styled.p`
-  display: grid;
-  grid-template-columns: 350px 350px auto;
+
+const Category = styled.div`
+  padding: 80px 0 0 0;
   justify-content: center;
-  gap: 10px;
-  font-size: 15px;
+  display: grid;
+  grid-template-rows: 24px;
+  gap: 340px;
+  @media (max-width: 640px) {
+    padding: 220px 0px 0px 60px;
+    gap: 380px;
+  }
+`
+const Rows = styled.div`
+  margin: 20px 0 0 0;
+  display: grid;
+  grid-template-columns: 340px 340px 340px;
+  gap: 20px;
 
   a {
-    color: rgb(255, 255, 255, 0.6);
-    font-weight: 400;
+    color: cyan;
+    font-weight: normal;
   }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 240px;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 240px 240px;
+  }
+  @media (max-width: 1024px) {
+    grid-template-columns: 240px 240px;
+  }
+`
+
+const Engineering = styled.div`
+  font-size: 15px;
+`
+const Science = styled.div`
+  font-size: 15px;
+`
+const Title = styled(H3)`
+  padding: 200px 0 0 0;
+  text-align: center;
+  color: white;
 `

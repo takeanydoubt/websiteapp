@@ -19,7 +19,9 @@ const Footer = () => {
         <WrapperText>
           <Text>Site made with React, Gatsby, Amazon AWS</Text>
           <Text>takeanydoubt © 2020</Text>
-          <Text>Terms of Service - Privacy Policy</Text>
+          <Text>
+            <Link to="/privacy">Terms of Service - Privacy Policy</Link>
+          </Text>
         </WrapperText>
       </Wrapper>
     </WrapperHero>
@@ -70,6 +72,10 @@ const Text = styled.p`
   @media (max-width: 640px) {
     line-height: 30px;
   }
+
+  a {
+    color: rgb(255, 255, 255, 0.8);
+  }
 `
 
 const Items = styled.div`
@@ -77,7 +83,7 @@ const Items = styled.div`
   font-weight: normal;
   font-size: 15px;
   text-align: center;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   display: grid;
   grid-template-columns: 24px auto;
   justify-content: center;

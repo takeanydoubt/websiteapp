@@ -110,7 +110,7 @@ const MenuWaWrapper = styled.div`
 const MenuItem = styled.div`
   color: rgb(255, 255, 255);
   font-size: 15px;
-  font-weight: 500;
+  font-weight: normal;
   font-style: normal;
   display: grid;
   grid-template-columns: 24px auto;

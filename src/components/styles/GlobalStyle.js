@@ -7,7 +7,7 @@ body{
    
    
     @media (prefers-color-scheme: dark){
-        background: ${themes.dark.backgroundColor}
+        background: ${themes.light.backgroundColor}
         
     }
     
