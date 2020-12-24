@@ -11,6 +11,7 @@ const Subject = () => {
       <SEO title="subject" />
       <Layout>
         <Title>All TakeAnyDoubt Subjects</Title>
+
         <Category>
           <Engineering>
             <Link style={{ fontSize: "24px", color: "white" }} to="">
@@ -44,8 +45,9 @@ export default Subject
 
 const Wrapper = styled.div`
   background: linear-gradient(180deg, #ff5775 -3.94%, #1f0a89 56.67%);
+  display: grid;
+  grid-template-columns: 1fr;
 `
-
 const Category = styled.div`
   padding: 80px 0 0 0;
   justify-content: center;
@@ -53,7 +55,7 @@ const Category = styled.div`
   grid-template-rows: 24px;
   gap: 340px;
   @media (max-width: 640px) {
-    padding: 220px 0px 0px 60px;
+    padding: 40px 0px 0px 60px;
     gap: 380px;
   }
 `
@@ -68,14 +70,15 @@ const Rows = styled.div`
     font-weight: normal;
   }
 
-  @media (max-width: 640px) {
-    grid-template-columns: 240px;
+  @media (max-width: 1024px) {
+    grid-template-columns: 240px 240px;
   }
   @media (max-width: 768px) {
     grid-template-columns: 240px 240px;
   }
-  @media (max-width: 1024px) {
-    grid-template-columns: 240px 240px;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 240px;
   }
 `
 
@@ -89,4 +92,8 @@ const Title = styled(H3)`
   padding: 200px 0 0 0;
   text-align: center;
   color: white;
+  @media (max-width: 640px) {
+    font-size: 22px;
+    text-align: center;
+  }
 `
