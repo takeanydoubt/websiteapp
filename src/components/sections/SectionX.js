@@ -10,7 +10,7 @@ export default function SectionX() {
         <Title>Comming Soon</Title>
         <SubTitle> This page is not available yet.</SubTitle>
 
-        <Link to="/tutor-application">
+        <Link to="/signup">
           <ApplyButton>Apply Now</ApplyButton>
         </Link>
       </ContentWrapper>

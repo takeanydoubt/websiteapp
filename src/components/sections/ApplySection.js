@@ -12,7 +12,7 @@ export default function ApplySection() {
         </Title>
         <SubTitle>Join our community of tutors!</SubTitle>
 
-        <Link to="/tutor-application">
+        <Link to="/upcoming">
           <ApplyButton>Apply Now</ApplyButton>
         </Link>
       </ContentWrapper>
@@ -22,33 +22,40 @@ export default function ApplySection() {
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  /* background: url("/images/waves/round-wave1.svg"); */
-  display: grid;
 `
 const ContentWrapper = styled.div`
-  max-width: 1234px;
-  margin: 100px auto;
-  padding: 100px 30px;
-  display: grid;
-  gap: 30px;
+  padding: 220px 0 0 0;
 `
 const Title = styled(H2)`
-  color: white;
-`
-const SubTitle = styled(H3)`
+  margin: 30px 0 30px 0;
   text-align: center;
   color: white;
+
+  @media (max-width: 640px) {
+    font-size: 22px;
+    line-height: 40px;
+  }
+`
+const SubTitle = styled(H3)`
+  margin: 30px 0 50px 0;
+  text-align: center;
+  color: white;
+
+  @media (max-width: 640px) {
+    font-size: 22px;
+    line-height: 40px;
+  }
 `
 const ApplyButton = styled.button`
-  margin: 0 400px;
-  width: 280px;
-  height: 77px;
+  margin-left: 600px;
+  width: 200px;
+  height: 60px;
   padding: 12px;
   background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%);
   box-shadow: 0px 20px 40px rgba(147, 231, 221, 0.3);
   border: 0.5px solid rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
-  font-size: 28px;
+  border-radius: 10px;
+  font-size: 22px;
   color: white;
   font-weight: bold;
   text-align: center;
@@ -59,5 +66,10 @@ const ApplyButton = styled.button`
 
   :hover {
     transform: translateY(-4px);
+  }
+
+  @media (max-width: 640px) {
+    margin-left: 100px;
+    font-size: 18px;
   }
 `

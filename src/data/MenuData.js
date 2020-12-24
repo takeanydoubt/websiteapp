@@ -60,7 +60,7 @@ export const footerData = [
   {
     title: "Tutors",
     icon: "/images/icons/team.svg",
-    link: "/tutors",
+    link: "/upcoming",
   },
 
   {
