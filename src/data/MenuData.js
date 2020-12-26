@@ -49,7 +49,7 @@ export const footerData = [
   {
     title: "Pricing",
     icon: "/images/icons/credit.svg",
-    link: "/prcing",
+    link: "/pricing",
   },
 
   {
