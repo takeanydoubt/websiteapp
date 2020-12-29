@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
+import ApplyNow from "../buttons/ApplyNow"
 function BeTutor() {
   return (
     <Wrapper>
@@ -10,6 +11,7 @@ function BeTutor() {
         mobility, larger customer market, advertising on your behalf, content
         monetisation and guaranteed payments into your bank acc.
       </Subtitle>
+      <ApplyNow />
     </Wrapper>
   )
 }
