@@ -18,18 +18,17 @@ function HeroSection() {
             </Title>
 
             <Description>
-              Instant Online tutoring and in-person tutoring with the best
-              tutors around the world.
+              Online tutoring with tutors from all around South Africa.
             </Description>
             <PurchaseButton
               title="Start Learning"
-              subtitle="Online + In-pernson class"
+              subtitle=" online tutoring"
             />
 
             <Descript>
-              Get in-person class for R100 +R10, Purchase includes access to any
-              subject, more than 1000+ premium content, 24 hours of tutoring,
-              source files and memos.
+              Get your online class for R100 +R10, Purchase includes access to
+              any subject, more than 1000+ premium content, 24 hours of
+              tutoring, source files and memos.
             </Descript>
           </TextWrapper>
         </ContentWrapper>
