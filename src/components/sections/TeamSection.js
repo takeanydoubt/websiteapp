@@ -35,6 +35,9 @@ const Wrapper = styled.div`
   gap: 60px;
   justify-content: center;
 
+  @media (max-width: 768px) {
+    grid-template-columns: 240px 240px;
+  }
   @media (max-width: 640px) {
     grid-template-columns: 240px;
   }
