@@ -18,7 +18,14 @@ export default Mission
 
 const Wrapper = styled.div`
   margin: 80px auto;
-  background: url("/images/waves/hero-wave2.svg");
+  width: 812px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  @media (max-width: 640px) {
+    width: 100%;
+  }
 `
 const Title = styled.h1`
   font-weight: 700;

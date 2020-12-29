@@ -17,14 +17,19 @@ function BeTutor() {
 export default BeTutor
 
 const Wrapper = styled.div`
+  width: 812px;
   margin: 10px auto 180px;
-  background: url("/images/waves/hero-wave2.svg");
 
+  @media (max-width: 768px) {
+    width: 100%;
+  }
   @media (max-width: 640px) {
     margin: 10px auto 120px;
+    width: 100%;
   }
 `
 const Title = styled.h1`
+  font-style: normal;
   font-weight: 700;
   color: ${themes.light.text2};
   font-size: 34px;

@@ -57,11 +57,12 @@ export default SemiHeroSection
 
 const Wrapper = styled.div`
   background: url("/images/waves/hero-wave2.svg");
+  margin: 0 auto;
 `
 
 const ContentWrapper = styled.div`
   margin: 0 auto;
-  padding: 300px 30px;
+  padding: 300px 30px 0 0;
 
   @media (max-width: 640px) {
     margin: 0 auto;
@@ -81,6 +82,7 @@ const CardGroup = styled.div`
   }
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
+    margin: 20px auto;
   }
 
   @media (max-width: 640px) {
