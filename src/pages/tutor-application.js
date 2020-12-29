@@ -10,7 +10,7 @@ const TutorApplication = () => {
       <SEO title="tutor-application" />
       <Header />
       <TextWrapper>
-        <Title>Talk to an expert</Title>
+        <Title>Talk to an expert today</Title>
         <Subtitle>
           We’ll help you combine the flexibility of the modern web with the
           control and compliance your business needs.
