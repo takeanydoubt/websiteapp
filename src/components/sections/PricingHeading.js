@@ -7,8 +7,7 @@ const PricingHeading = () => {
     <HeroGroup>
       <Title>Ready to start?</Title>
       <Content>
-        Get access to your plan courses, in person classes, tutorials,
-        downloads, and priority support.
+        Online tutoring with tutors from all around South Africa.
       </Content>
     </HeroGroup>
   )

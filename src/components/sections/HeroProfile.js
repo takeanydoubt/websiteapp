@@ -52,14 +52,15 @@ const Heading = styled.h1`
 `
 const HeadingSmall = styled.p`
   font-weight: 600;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 130%;
   text-align: center;
   text-transform: uppercase;
   color: ${themes.light.text2};
 `
 const HeadingDescription = styled.p`
-  margin: 0 auto;
+  margin: 20px auto;
+  padding-bottom: 40px;
   width: 460px;
   font-style: normal;
   font-weight: normal;

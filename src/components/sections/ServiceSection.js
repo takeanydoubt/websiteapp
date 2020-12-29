@@ -11,6 +11,7 @@ const Card = props => {
         <DescriptionCard>{props.description1}</DescriptionCard>
         <DescriptionCard>{props.description2}</DescriptionCard>
         <DescriptionCard>{props.description3}</DescriptionCard>
+        <DescriptionCard>{props.description4}</DescriptionCard>
       </CardText>
     </Hero>
   )
@@ -22,7 +23,7 @@ const TeamSection = () => {
       <Title>Our services</Title>
       <TextWrapper>
         <Subtitle>Affordable packages</Subtitle>
-        <Subtitle>1on1 direct tutoring</Subtitle>
+        {/* <Subtitle>1on1 direct tutoring</Subtitle> */}
       </TextWrapper>
       <CardGroup>
         <Card
@@ -40,11 +41,12 @@ const TeamSection = () => {
           description3="Valid for 7 days"
         />
         <Card
-          title="Montly"
+          title="Monthly"
           description="4h Online classes"
           description1="Access to contents"
-          description2="Unlimited Papers and MemorandumUnlimited Quiz"
-          description3="Valid for 30 days"
+          description2="Unlimited Papers and Memorandum "
+          description3="Unlimited Quiz"
+          description4="Valid for 30 days"
         />
         <Card
           title="Once off purcharse"
@@ -86,9 +88,8 @@ const CardGroup = styled.div`
 `
 const TextWrapper = styled.div`
   display: grid;
-  grid-template-columns: 300px 300px;
-  justify-content: space-around;
-  margin: 0 20px 40px 80px;
+  justify-content: center;
+  padding-bottom: 40px;
 
   @media (max-width: 640px) {
     grid-template-columns: 300px;

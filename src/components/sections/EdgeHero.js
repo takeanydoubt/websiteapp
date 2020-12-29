@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import PurchaseButton from "../buttons/PurchaseButton"
 import { themes } from "../styles/ColorStyles"
 const EdgeHero = () => {
   return (
@@ -46,9 +45,7 @@ const EdgeHero = () => {
           <Paragraph>2. Simple notification service</Paragraph>
         </WrapperText>
       </HeroGroup>
-      <Positio>
-        <PurchaseButton />
-      </Positio>
+      <Positio></Positio>
     </Hero>
   )
 }

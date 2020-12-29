@@ -15,15 +15,15 @@ const SemiHeroSection = () => {
             <SemiHeroCard image="https://static.dribbble.com/users/1908682/screenshots/4817915/______-___-________3.jpg" />
             <Heading>1. Choose service</Heading>
             <Paragraph>
-              In order to accomodate the needs of every student TAD has to types
-              of tutoring services affordable packages and face to face direct
-              tutoring. Choose what suits you the best, introduce a debit card
-              or EFT payment and you are ready to start learning.
+              In order to accomodate the needs of every student TAD has two
+              types of tutoring services affordable packages and face to face
+              direct tutoring. Choose what suits you the best, introduce a debit
+              card or EFT payment and you are ready to start learning.
             </Paragraph>
           </Description>
           <Description>
             <SemiHeroCard image="https://static.dribbble.com/users/81451/screenshots/6463636/illustration---n2.png" />
-            <Heading>2.Book lesson</Heading>
+            <Heading>2. Book lesson</Heading>
             <Paragraph>
               Make use of our search bar or navigate the platform to select
               which tutor you want to help you and make a booking for the
@@ -32,7 +32,7 @@ const SemiHeroSection = () => {
           </Description>
           <Description>
             <SemiHeroCard image="https://cdn.dribbble.com/users/508588/screenshots/14009907/media/c12a7603eb5e798a85962d40e6ff4066.jpg?compress=1&resize=1600x1200" />
-            <Heading>3.Learn</Heading>
+            <Heading>3. Learn</Heading>
             <Paragraph>
               Get help from a professional tutor and use our variety of tools
               such as virtual whiteboard, video/audio chat, files sharing,
@@ -41,7 +41,7 @@ const SemiHeroSection = () => {
           </Description>
           <Description>
             <SemiHeroCard image="https://static.dribbble.com/users/142973/screenshots/9875511/media/9fe204959d18d53462629c682ea89c14.png" />
-            <Heading>4.Review</Heading>
+            <Heading>4. Review</Heading>
             <Paragraph>
               After the tutoring class is completed the student will have the
               chance to rate the tutor to help us maitain our quality.

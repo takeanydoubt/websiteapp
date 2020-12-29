@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import PurchaseButton from "../buttons/PurchaseButton"
+// import PurchaseButton from "../buttons/PurchaseButton"
 import { themes } from "../styles/ColorStyles"
 import { H1, MediumText } from "../styles/TextStyles"
 import SearchBar from "./SearchBar"
@@ -9,30 +9,30 @@ function HeroSection() {
   return (
     <WrapperWave>
       <Wrapper>
+        <SearchBar />
         <ContentWrapper>
-          <TextWrapper>
-            <Title>
-              It's time
+          {/* <TextWrapper> */}
+          {/* <Title> */}
+          {/* It's time
               <br /> for better <br />
-              IQ & grades
-            </Title>
+              IQ & grades */}
+          {/* </Title> */}
 
-            <Description>
-              Online tutoring with tutors from all around South Africa.
-            </Description>
-            <PurchaseButton
+          {/* <Description> */}
+          {/* Online tutoring with tutors from all around South Africa. */}
+          {/* </Description> */}
+          {/* <PurchaseButton
               title="Start Learning"
               subtitle=" online tutoring"
-            />
+            /> */}
 
-            <Descript>
-              Get your online class for R100 +R10, Purchase includes access to
+          {/* <Descript> */}
+          {/* Get your online class for R100 +R10, Purchase includes access to
               any subject, more than 1000+ premium content, 24 hours of
-              tutoring, source files and memos.
-            </Descript>
-          </TextWrapper>
+              tutoring, source files and memos. */}
+          {/* </Descript> */}
+          {/* </TextWrapper> */}
         </ContentWrapper>
-        <SearchBar />
       </Wrapper>
     </WrapperWave>
   )
@@ -45,8 +45,8 @@ const WrapperWave = styled.div`
   background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
 `
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* display: grid; */
+  /* grid-template-columns: repeat(1, 1fr); */
   background: url("/images/waves/hero-wave1.svg");
 
   @media (max-width: 640px) {

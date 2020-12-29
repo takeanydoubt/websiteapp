@@ -27,48 +27,57 @@ const SearchBar = () => {
   }
 
   return (
-    <Wrapper>
+    <WrapperMain>
       <Title>Improve your grades</Title>
-      <GroupWrapper>
-        <Input
-          type="text"
-          placeholder="What is the subject you need help with?
+      <Subtitle>
+        Online tutoring with tutors from all around South Africa.
+      </Subtitle>
+      <Wrapper>
+        <GroupWrapper>
+          <Input
+            type="text"
+            placeholder="What is the subject you need help with?
           (e.g. 'Calculs') "
-          onChange={handleChange}
-          value={input}
-          onClick={() => setVisible(!visible)}
-        />
+            onChange={handleChange}
+            value={input}
+            onClick={() => setVisible(!visible)}
+          />
 
-        <IconWrapper>
-          <Icon src="images/icons/search.svg" />
-        </IconWrapper>
-      </GroupWrapper>
+          <IconWrapper>
+            <Icon src="images/icons/search.svg" />
+          </IconWrapper>
+        </GroupWrapper>
 
-      {visible ? (
-        <WrapperHero>
-          {subjects.map((subject, index) => (
-            <Text key={index}>
-              {subject.name} -{subject.course}
-            </Text>
-          ))}
-        </WrapperHero>
-      ) : null}
-    </Wrapper>
+        {visible ? (
+          <WrapperHero>
+            {subjects.map((subject, index) => (
+              <Text key={index}>
+                {subject.name} -{subject.course}
+              </Text>
+            ))}
+          </WrapperHero>
+        ) : null}
+      </Wrapper>
+    </WrapperMain>
   )
 }
 
 export default SearchBar
 
+const WrapperMain = styled.div`
+  margin: 0 auto;
+  padding: 280px 0px 0px 0px;
+`
 const Wrapper = styled.div`
-  padding: 180px 30px;
+  display: grid;
+  grid-template-columns: 600px;
+  justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
+    grid-template-columns: 300px;
   }
-
-  @media (max-width: 640px) {
-    margin: 0 0px 0 0;
-    padding: 0 auto;
-    display: none;
+  @media (max-width: 768px) {
+    grid-template-columns: 300px;
   }
 `
 
@@ -107,8 +116,9 @@ const GroupWrapper = styled.div`
   position: relative;
 
   @media (max-width: 640px) {
-    width: 260px;
-    height: 46px;
+    /* width: 260px;
+    height: 46px; */
+    display: none;
   }
   @media (max-width: 768px) {
     width: 260px;
@@ -149,7 +159,9 @@ const Text = styled.p`
 `
 
 const Title = styled(H1)`
-  margin: 0 0 20px 0;
+  margin: 0 0 40px 0;
+  text-align: center;
+
   color: ${themes.dark.text1};
   @media (max-width: 1024px) {
     font-size: 32px;
@@ -159,5 +171,17 @@ const Title = styled(H1)`
   }
   @media (max-width: 640px) {
     font-size: 32px;
+    text-align: center;
+  }
+`
+
+const Subtitle = styled.p`
+  margin: 0 0 40px 0;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  @media (max-width: 640px) {
+    font-size: 12px;
+    margin: 0 30px 0 30px;
   }
 `

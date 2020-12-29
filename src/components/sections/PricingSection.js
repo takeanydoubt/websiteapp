@@ -1,12 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import SelectButton from "../buttons/SelectButton"
 
 function PricingSection() {
   return (
     <Hero>
-      <SelectButton firstButton="Online" secondButton="Personal" />
-
       <CardHero>
         <DailyCard>
           <Title>Daily</Title>
@@ -30,12 +27,12 @@ function PricingSection() {
           </Button>
         </DailyCard>
         <MontlyCard>
-          <Title>Montly</Title>
+          <Title>Monthly</Title>
           <SubTitle>R800</SubTitle>
 
           <Text>
             <img alt="" src="images/icons/check.svg" />
-            4h Online classes (R100 + R10)
+            4h Online classes
           </Text>
           <Text>
             <img alt="" src="images/icons/check.svg" />
@@ -59,7 +56,7 @@ function PricingSection() {
           <SubTitle>R260</SubTitle>
           <Text>
             <img alt="" src="images/icons/check.svg" />
-            1h Online class (R100 + R10)
+            1h Online class
           </Text>
           <Text>
             <img alt="" src="images/icons/check.svg" />
