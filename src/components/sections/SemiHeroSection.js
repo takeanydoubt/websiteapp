@@ -108,6 +108,8 @@ const Title = styled.h1`
 const Description = styled.div`
   display: grid;
   grid-gap: 40px;
+  margin: 0 10px 0 10px;
+  justify-items: center;
 `
 const Heading = styled.h3`
   color: ${themes.light.text2};
