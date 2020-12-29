@@ -8,12 +8,18 @@ import EdgeHero from "../components/sections/EdgeHero"
 import PricingHeading from "../components/sections/PricingHeading"
 import HeroProfile from "../components/sections/HeroProfile"
 import { window } from "browser-monads"
+import Mission from "../components/sections/MissionSection"
+import BeTutor from "../components/sections/BecomeTutor"
+import ServiceSection from "../components/sections/ServiceSection"
 const MainLayout = () => {
   return (
     <Layout>
       <SEO title="home" />
       <HeroSection />
+      <Mission />
       <SemiHeroSection />
+      <BeTutor />
+      <ServiceSection />
       <EdgeHero />
       <PricingHeading />
       <PricingSection />
@@ -26,7 +32,10 @@ const MainLayout2 = () => {
     <Layout>
       <SEO title="home" />
       <HeroSection />
+      <Mission />
       <SemiHeroSection />
+      <BeTutor />
+      <ServiceSection />
       <EdgeHero />
       <HeroProfile />
       <PricingHeading />

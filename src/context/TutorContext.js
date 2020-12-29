@@ -25,7 +25,7 @@ const TutorContextProvider = props => {
       paragraphContent1: "I teach Drawing since 2013.",
       headingContent2: "Angolan",
       paragraphContent2:
-        "I'm from USA, I am currently based in Cape Town, South Africa.",
+        "I'm from Angola, I am currently based in Cape Town, South Africa.",
     }
   )
 

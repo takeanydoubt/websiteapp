@@ -14,10 +14,11 @@ export default SemiHeroCard
 
 const Card = styled.div`
   width: 320px;
-  height: 330px;
+  height: 320px;
+
   position: relative;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 50%;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
   display: grid;
   grid-template-rows: 1fr 1fr;

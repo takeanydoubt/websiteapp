@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import { themes } from "../styles/ColorStyles"
+import { H1 } from "../styles/TextStyles"
 
 const SearchBar = () => {
   const [input, setInput] = useState("")
@@ -26,10 +28,12 @@ const SearchBar = () => {
 
   return (
     <Wrapper>
+      <Title>Improve your grades</Title>
       <GroupWrapper>
         <Input
           type="text"
-          placeholder="What subject do you need help with?(e.g. 'Calculs') "
+          placeholder="What is the subject you need help with?
+          (e.g. 'Calculs') "
           onChange={handleChange}
           value={input}
           onClick={() => setVisible(!visible)}
@@ -142,4 +146,18 @@ const WrapperHero = styled.div`
 const Text = styled.p`
   display: grid;
   padding: 30px 0 0 20px;
+`
+
+const Title = styled(H1)`
+  margin: 0 0 20px 0;
+  color: ${themes.dark.text1};
+  @media (max-width: 1024px) {
+    font-size: 32px;
+  }
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
+  @media (max-width: 640px) {
+    font-size: 32px;
+  }
 `

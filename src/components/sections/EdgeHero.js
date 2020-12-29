@@ -5,53 +5,45 @@ import { themes } from "../styles/ColorStyles"
 const EdgeHero = () => {
   return (
     <Hero>
-      <Title>Why use TakeAnyDoubt?</Title>
+      <Title>Why use TAD?</Title>
       <HeroGroup>
         <WrapperText>
           <Heading>
             <img alt="" src="images/icons/chat.svg" />
-            On-demand tutoring
+            Relevant content
           </Heading>
 
-          <Paragraph>
-            Connect with an online tutor in less than 30 seconds, 24/7. It
-            doesn’t matter if you want help with a single problem or you need a
-            3-hour lesson.
-          </Paragraph>
+          <Paragraph>1. Tutor notes and presentations</Paragraph>
+          <Paragraph>2. Book exercises solutions</Paragraph>
+          <Paragraph>3. Quizzes</Paragraph>
+          <Paragraph>4. Question papers and memos</Paragraph>
         </WrapperText>
 
         <WrapperText>
           <Heading>
             <img alt="" src="images/icons/award.svg" />
-            Learn from the best tutors
+            Professional tutors
           </Heading>
-          <Paragraph>
-            Highly qualified tutors from the best universities across the globe
-            ready to help. An acceptance rate of 4% means all our tutors are
-            thoroughly screened.
-          </Paragraph>
+          <Paragraph>1. Only certified tutors</Paragraph>
+          <Paragraph>2. Qualified tutors</Paragraph>
         </WrapperText>
         <WrapperText>
           <Heading>
             <img alt="" src="images/icons/livestreams.svg" />
             All the tools you need
           </Heading>
-          <Paragraph>
-            Our lesson space features a virtual whiteboard, text editor,
-            audio/video chat, screensharing and so much more. All lessons are
-            archived for your convenience.
-          </Paragraph>
+          <Paragraph>1. Virtual whiteboard</Paragraph>
+          <Paragraph>2. files sharing</Paragraph>
+          <Paragraph>3. Audio/video chat</Paragraph>
+          <Paragraph>4. Screensharing</Paragraph>
         </WrapperText>
         <WrapperText>
           <Heading>
             <img alt="" src="images/icons/comment.svg" />
-            Get help in any subject
+            Advanced technology
           </Heading>
-          <Paragraph>
-            We cover over 300 subjects across all grade levels. Whether it’s
-            high school algebra or college-level Spanish, we have a tutor that
-            can help.
-          </Paragraph>
+          <Paragraph>1. Content monetisation</Paragraph>
+          <Paragraph>2. Simple notification service</Paragraph>
         </WrapperText>
       </HeroGroup>
       <Positio>

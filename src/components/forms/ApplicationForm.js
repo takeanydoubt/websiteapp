@@ -8,9 +8,9 @@ const ApplicationForm = () => {
     { value: "female", label: "Female" },
   ]
 
-  const cus = {
-    color: "red",
-  }
+  // const cus = {
+  //   color: "red",
+  // }
   return (
     <Form>
       <FormTitle>Apply for Tutor</FormTitle>

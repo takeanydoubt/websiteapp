@@ -10,6 +10,13 @@ const TeamSection = () => {
         title="Celso Adriano"
         role="CEO & Founder"
       />
+
+      <TeamCard
+        icon="images/avatars/suzana.jpg"
+        title="Suzana António"
+        role="Financial Manager"
+      />
+
       <TeamCard
         icon="images/avatars/alberto.jpg"
         title="Alberto Almeida"
@@ -24,7 +31,7 @@ export default TeamSection
 const Wrapper = styled.div`
   padding: 100px 0 0 0;
   display: grid;
-  grid-template-columns: 240px auto;
+  grid-template-columns: 240px auto auto;
   gap: 60px;
   justify-content: center;
 
