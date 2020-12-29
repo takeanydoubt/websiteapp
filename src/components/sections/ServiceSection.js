@@ -122,6 +122,11 @@ const Hero = styled.div`
   height: 330px;
   background: linear-gradient(180deg, #3913b8 0%, #336cc1 100%);
   border-radius: 20px;
+
+  @media (max-width: 640px) {
+    width: 240px;
+    height: 230px;
+  }
 `
 const CardText = styled.div`
   margin: 0 auto;
