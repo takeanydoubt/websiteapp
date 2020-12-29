@@ -63,6 +63,7 @@ const Wrapper = styled.div`
 
   @media (max-width: 640px) {
     grid-template-columns: 240px;
+    padding: 20px 0 100px 0;
   }
 `
 
@@ -102,6 +103,7 @@ const Title = styled.div`
   text-align: center;
   padding: 20px 0 70px 0;
   @media (max-width: 640px) {
+    padding: 10px 0 40px 0;
   }
 `
 const Subtitle = styled.div`
@@ -109,6 +111,8 @@ const Subtitle = styled.div`
   color: ${themes.light.text1};
 
   @media (max-width: 640px) {
+    font-size: 18px;
+    margin: 0 40px 0 40px;
   }
 `
 

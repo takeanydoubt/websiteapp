@@ -101,8 +101,9 @@ const Title = styled.h1`
   text-align: center;
 
   @media (max-width: 640px) {
-    font-size: 22px;
-    margin-bottom: 40px;
+    font-size: 32px;
+    margin-bottom: 50px;
+    margin-top: 40px;
   }
 `
 const Description = styled.div`

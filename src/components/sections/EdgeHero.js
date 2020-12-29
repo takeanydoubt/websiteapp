@@ -79,7 +79,8 @@ const Title = styled.h1`
   text-align: center;
 
   @media (max-width: 640px) {
-    font-size: 22px;
+    margin: 40px 0 0 0;
+    font-size: 34px;
   }
 `
 const WrapperText = styled.div`
