@@ -125,7 +125,13 @@ const ApplicationForm = () => {
           placeholder="Country"
         />
 
-        <Select onChange={handleInput} id="gender" type="txt" name="gender">
+        <Select
+          onChange={handleInput}
+          id="gender"
+          type="txt"
+          name="gender"
+          value={subjects.gender}
+        >
           <option selected value="Gender" disabled>
             Gender
           </option>
@@ -133,7 +139,13 @@ const ApplicationForm = () => {
             <option>{newGender.name}</option>
           ))}
         </Select>
-        <Select onChange={handleInput} id="role" type="txt" name="role">
+        <Select
+          onChange={handleInput}
+          id="role"
+          type="txt"
+          name="role"
+          value={subjects.role}
+        >
           <option selected value="Ocupation" disabled>
             Ocupation
           </option>
@@ -141,7 +153,13 @@ const ApplicationForm = () => {
             <option key={index}>{role.name}</option>
           ))}
         </Select>
-        <Select onChange={handleInput} id="subject" type="txt" name="subject">
+        <Select
+          onChange={handleInput}
+          id="subject"
+          type="txt"
+          name="subject"
+          valeu={subjects.subject}
+        >
           <option selected value="Subject" disabled>
             Subject of interest
           </option>
@@ -154,6 +172,7 @@ const ApplicationForm = () => {
           id="education"
           type="txt"
           name="education"
+          value={subjects.education}
         >
           <option selected value="Education" disabled>
             Eduaction
@@ -167,12 +186,15 @@ const ApplicationForm = () => {
           id="preference"
           type="txt"
           name="preference"
+          valeu={subjects.preference}
         >
           <option selected value="Tutoring" disabled>
             Tutoring preference
           </option>
           {preference.map((mode, index) => (
-            <option key={index}>{mode.name}</option>
+            <option key={index} valeu={mode.name}>
+              {mode.name}
+            </option>
           ))}
         </Select>
         <SaveButton onSubmit={handleSubmit}>Submit</SaveButton>
