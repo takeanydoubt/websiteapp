@@ -1,7 +1,25 @@
 import React from "react"
 import styled from "styled-components"
+import StripeChekout from "react-stripe-checkout"
 
 function PricingSection() {
+  const handlePurchase = token => {
+    const amount = 1000000
+    const description = " My awesome project"
+    const bodyObject = {
+      tokenId: token.id,
+      email: token.email,
+      name: token.name,
+      description,
+      amount,
+    }
+
+    fetch("http://localhost:9000/stripe-charge", {
+      method: "POST",
+      body: JSON.stringify(bodyObject),
+    })
+  }
+
   return (
     <Hero>
       <CardHero>
@@ -20,11 +38,17 @@ function PricingSection() {
             <img alt="" src="images/icons/check.svg" />
             2x Quiz
           </Text>
-
-          <Button>
-            <img alt="" src="images/icons/check-blue.svg" />
-            Subscribe
-          </Button>
+          <StripeChekout
+            amount={5000}
+            image="https://share.getcloudapp.com/xQuY1QWg"
+            token={handlePurchase}
+            stripeKey="pk_test_UhQ3QelLyQCC3uvuT6FyJLXC00cSqTXc0l"
+          >
+            <Button>
+              <img alt="" src="images/icons/check-blue.svg" />
+              Subscribe
+            </Button>
+          </StripeChekout>
         </DailyCard>
         <MontlyCard>
           <Title>Monthly</Title>

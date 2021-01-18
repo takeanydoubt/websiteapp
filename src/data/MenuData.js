@@ -69,3 +69,25 @@ export const footerData = [
     link: "/team",
   },
 ]
+
+export const studentData = [
+  { title: "Home", icon: "/images/icons/home.svg", link: "/student" },
+  {
+    title: "Academic",
+    icon: "/images/icons/file.svg",
+    link: "/student/student-content",
+  },
+
+  {
+    title: "Meet tutor",
+    icon: "/images/icons/tutorials.svg",
+    link: "/student/classroom",
+  },
+
+  {
+    title: "Settings",
+    icon: "/images/icons/settings.svg",
+    link: "/student/settings",
+  },
+  { title: "Sign out", icon: "/images/icons/signout.svg", link: "/signout" },
+]

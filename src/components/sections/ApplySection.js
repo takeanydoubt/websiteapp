@@ -12,7 +12,7 @@ export default function ApplySection() {
         </Title>
         <SubTitle>Join our community of tutors!</SubTitle>
 
-        <Link to="/">
+        <Link to="/application">
           <ApplyButton>Apply Now</ApplyButton>
         </Link>
       </ContentWrapper>
