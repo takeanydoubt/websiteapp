@@ -3,6 +3,17 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { TabScrollButton } from "@material-ui/core"
 import SEO from "../components/layout/seo"
+// import { useDropzone } from "react-dropzone"
+
+export const AlertMessage = () => {
+  return (
+    <Card>
+      <h1>Thank your!</h1>
+      <p>Your application submission has been received</p>
+      <Link to="https://takeanydoubt.com">Back to our Site</Link>
+    </Card>
+  )
+}
 
 const subjects = [
   { name: "Mathematics 1" },
@@ -17,12 +28,13 @@ const roles = [
 ]
 const education = [
   { name: "University Of  Cape Town" },
-  { name: "StudenUniversity Of Pretoria" },
+  { name: "Student University Of Pretoria" },
   { name: "University Of Johanesburg " },
   { name: "University Of Stelenbosh" },
   { name: "UWBC " },
   { name: "UNISA " },
 ]
+
 const preference = [{ name: "Online" }, { name: "In Person" }]
 
 const ApplicationForm = () => {
@@ -31,6 +43,7 @@ const ApplicationForm = () => {
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&")
   }
+  // const [file, setFile] = useState({})
 
   const [formState, setFormState] = useState({
     name: "",
@@ -45,13 +58,21 @@ const ApplicationForm = () => {
     role: "",
   })
 
+  // const onDrop = useCallback(acceptedFiles => {
+  //   console.log(acceptedFiles)
+  //   setFile(acceptedFiles[0])
+  // }, [])
+
+  // const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
+
   function handleSubmit(event) {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formState }),
     })
-      .then(() => alert("Success!"))
+      // .then(() => alert("Success!"))
+      .then(() => <AlertMessage />)
       .catch(error => alert(error))
 
     event.preventDefault()
@@ -141,7 +162,7 @@ const ApplicationForm = () => {
             Gender
           </option>
           {gender.map((newGender, index) => (
-            <option>{newGender.name}</option>
+            <option key={index}>{newGender.name}</option>
           ))}
         </Select>
         <Select
@@ -202,6 +223,10 @@ const ApplicationForm = () => {
             </option>
           ))}
         </Select>
+        {/* <div {...getRootProps()}>
+          
+        </div> */}
+        {/* <Input type="file" id="" name="" value="" /> */}
         <SaveButton onSubmit={handleSubmit}>Submit</SaveButton>
       </WrapperForm>
     </Wrapper>
@@ -209,6 +234,28 @@ const ApplicationForm = () => {
 }
 
 export default ApplicationForm
+
+const Card = styled.div`
+  width: 400px;
+  height: 350px;
+  background: white;
+  border-radius: 10px;
+
+  h1 {
+    font-size: 32px;
+    color: black;
+    line-height: 24px;
+  }
+  p {
+    font-size: 18px;
+    color: black;
+    line-height: 24px;
+    a {
+      font-size: 22px;
+      color: green;
+    }
+  }
+`
 
 const Wrapper = styled.div`
   position: absolute;
