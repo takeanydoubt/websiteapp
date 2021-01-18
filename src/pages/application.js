@@ -60,7 +60,7 @@ const ApplicationForm = () => {
   function handleInput(event) {
     setFormState({
       ...formState,
-      [event.target.name]: event.target.name,
+      [event.target.name]: event.target.value,
     })
   }
 
@@ -95,6 +95,7 @@ const ApplicationForm = () => {
           type="text"
           name="name"
           placeholder="First name"
+          vale={formState.name}
         />
         <Input
           onChange={handleInput}
@@ -102,6 +103,7 @@ const ApplicationForm = () => {
           type="text"
           name="lname"
           placeholder="Last Name"
+          value={formState.lname}
         />
         <Input
           onChange={handleInput}
@@ -109,6 +111,7 @@ const ApplicationForm = () => {
           type="text"
           name="email"
           placeholder="Email "
+          value={formState.email}
         />
         <Input
           onChange={handleInput}
@@ -116,6 +119,7 @@ const ApplicationForm = () => {
           type="text"
           name="phone"
           placeholder="Phone "
+          value={formState.phone}
         />
         <Input
           onChange={handleInput}
@@ -123,6 +127,7 @@ const ApplicationForm = () => {
           type="text"
           name="country"
           placeholder="Country"
+          value={formState.country}
         />
 
         <Select
@@ -130,7 +135,7 @@ const ApplicationForm = () => {
           id="gender"
           type="txt"
           name="gender"
-          value={subjects.gender}
+          value={formState.gender}
         >
           <option selected value="Gender" disabled>
             Gender
@@ -144,7 +149,7 @@ const ApplicationForm = () => {
           id="role"
           type="txt"
           name="role"
-          value={subjects.role}
+          value={formState.role}
         >
           <option selected value="Ocupation" disabled>
             Ocupation
@@ -158,7 +163,7 @@ const ApplicationForm = () => {
           id="subject"
           type="txt"
           name="subject"
-          valeu={subjects.subject}
+          valeu={formState.subject}
         >
           <option selected value="Subject" disabled>
             Subject of interest
@@ -172,7 +177,7 @@ const ApplicationForm = () => {
           id="education"
           type="txt"
           name="education"
-          value={subjects.education}
+          value={formState.education}
         >
           <option selected value="Education" disabled>
             Eduaction
@@ -186,7 +191,7 @@ const ApplicationForm = () => {
           id="preference"
           type="txt"
           name="preference"
-          valeu={subjects.preference}
+          valeu={formState.preference}
         >
           <option selected value="Tutoring" disabled>
             Tutoring preference
