@@ -1,19 +1,8 @@
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import React, { useState } from "react"
 import styled from "styled-components"
 import { TabScrollButton } from "@material-ui/core"
 import SEO from "../components/layout/seo"
-// import { useDropzone } from "react-dropzone"
-
-export const AlertMessage = () => {
-  return (
-    <Card>
-      <h1>Thank your!</h1>
-      <p>Your application submission has been received</p>
-      <Link to="https://takeanydoubt.com">Back to our Site</Link>
-    </Card>
-  )
-}
 
 const subjects = [
   { name: "Mathematics 1" },
@@ -27,12 +16,12 @@ const roles = [
   { name: "Employee " },
 ]
 const education = [
-  { name: "University Of  Cape Town" },
   { name: "Student University Of Pretoria" },
   { name: "University Of Johanesburg " },
   { name: "University Of Stelenbosh" },
   { name: "UWBC " },
   { name: "UNISA " },
+  { name: "University Of  Cape Town" },
 ]
 
 const preference = [{ name: "Online" }, { name: "In Person" }]
@@ -43,6 +32,7 @@ const ApplicationForm = () => {
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&")
   }
+
   // const [file, setFile] = useState({})
 
   const [formState, setFormState] = useState({
@@ -56,14 +46,8 @@ const ApplicationForm = () => {
     preference: "",
     education: "",
     role: "",
+    birthday: "",
   })
-
-  // const onDrop = useCallback(acceptedFiles => {
-  //   console.log(acceptedFiles)
-  //   setFile(acceptedFiles[0])
-  // }, [])
-
-  // const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
 
   function handleSubmit(event) {
     fetch("/", {
@@ -71,8 +55,7 @@ const ApplicationForm = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formState }),
     })
-      // .then(() => alert("Success!"))
-      .then(() => <AlertMessage />)
+      .then(() => navigate("/thank-you/"))
       .catch(error => alert(error))
 
     event.preventDefault()
@@ -110,7 +93,10 @@ const ApplicationForm = () => {
           providing all the necessary informations and submite your application
           for review.
         </Subtitle>
+
         <Input
+          required
+          maxlength="10"
           onChange={handleInput}
           id="name"
           type="text"
@@ -118,7 +104,10 @@ const ApplicationForm = () => {
           placeholder="First name"
           vale={formState.name}
         />
+
         <Input
+          required
+          maxlength="10"
           onChange={handleInput}
           id="lname"
           type="text"
@@ -126,7 +115,10 @@ const ApplicationForm = () => {
           placeholder="Last Name"
           value={formState.lname}
         />
+
         <Input
+          required
+          maxlength="10"
           onChange={handleInput}
           id="email"
           type="text"
@@ -134,7 +126,10 @@ const ApplicationForm = () => {
           placeholder="Email "
           value={formState.email}
         />
+
         <Input
+          required
+          maxlength="10"
           onChange={handleInput}
           id="phone"
           type="text"
@@ -142,7 +137,10 @@ const ApplicationForm = () => {
           placeholder="Phone "
           value={formState.phone}
         />
+
         <Input
+          required
+          maxlength="10"
           onChange={handleInput}
           id="country"
           type="text"
@@ -150,36 +148,54 @@ const ApplicationForm = () => {
           placeholder="Country"
           value={formState.country}
         />
-
+        <label style={{ marginLeft: "32px" }}>Date of birth</label>
+        <Input
+          required
+          maxlength="10"
+          onChange={handleInput}
+          type="date"
+          id="birthday"
+          name="birthday"
+          value={formState.birthday}
+        />
         <Select
+          required
+          maxlength="10"
           onChange={handleInput}
           id="gender"
           type="txt"
           name="gender"
-          value={formState.gender}
+          valeu={formState.gender}
         >
           <option selected value="Gender" disabled>
             Gender
           </option>
-          {gender.map((newGender, index) => (
-            <option key={index}>{newGender.name}</option>
+          {gender.map((gender, index) => (
+            <option required key={index} valeu={gender.name}>
+              {gender.name}
+            </option>
           ))}
         </Select>
         <Select
+          required
+          maxlength="10"
           onChange={handleInput}
           id="role"
           type="txt"
           name="role"
-          value={formState.role}
+          valeu={formState.role}
         >
           <option selected value="Ocupation" disabled>
             Ocupation
           </option>
           {roles.map((role, index) => (
-            <option key={index}>{role.name}</option>
+            <option key={index} valeu={role.name}>
+              {role.name}
+            </option>
           ))}
         </Select>
         <Select
+          required
           onChange={handleInput}
           id="subject"
           type="txt"
@@ -193,28 +209,36 @@ const ApplicationForm = () => {
             <option key={index}>{subject.name}</option>
           ))}
         </Select>
+
         <Select
+          required
+          maxlength="10"
           onChange={handleInput}
           id="education"
           type="txt"
           name="education"
-          value={formState.education}
+          valeu={formState.education}
         >
           <option selected value="Education" disabled>
-            Eduaction
+            Education
           </option>
-          {education.map((university, index) => (
-            <option key={index}>{university.name}</option>
+          {education.map((education, index) => (
+            <option key={index} valeu={education.name}>
+              {education.name}
+            </option>
           ))}
         </Select>
+
         <Select
+          required
+          maxlength="10"
           onChange={handleInput}
           id="preference"
           type="txt"
           name="preference"
           valeu={formState.preference}
         >
-          <option selected value="Tutoring" disabled>
+          <option selected value="Preference" disabled>
             Tutoring preference
           </option>
           {preference.map((mode, index) => (
@@ -223,10 +247,7 @@ const ApplicationForm = () => {
             </option>
           ))}
         </Select>
-        {/* <div {...getRootProps()}>
-          
-        </div> */}
-        {/* <Input type="file" id="" name="" value="" /> */}
+
         <SaveButton onSubmit={handleSubmit}>Submit</SaveButton>
       </WrapperForm>
     </Wrapper>
@@ -235,32 +256,14 @@ const ApplicationForm = () => {
 
 export default ApplicationForm
 
-const Card = styled.div`
-  width: 400px;
-  height: 350px;
-  background: white;
-  border-radius: 10px;
-
-  h1 {
-    font-size: 32px;
-    color: black;
-    line-height: 24px;
-  }
-  p {
-    font-size: 18px;
-    color: black;
-    line-height: 24px;
-    a {
-      font-size: 22px;
-      color: green;
-    }
-  }
-`
-
 const Wrapper = styled.div`
-  position: absolute;
-  top: 78px;
-  left: 440px;
+  padding: 80px 0 0px 0;
+  display: grid;
+  justify-content: center;
+
+  @media (max-width: 640px) {
+    margin: 0px 40px 0 0px;
+  }
 `
 const WrapperContent = styled.div`
   display: grid;
@@ -275,7 +278,7 @@ const Title = styled.h1`
 `
 const Subtitle = styled.p`
   padding: 0px 40px 20px 40px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 22px;
 `
 const Heading1 = styled.h2`
@@ -300,6 +303,11 @@ const WrapperForm = styled.form`
   height: 998px;
   background: white;
   border-radius: 10px;
+
+  @media (max-width: 640px) {
+    width: 300px;
+    height: 700px;
+  }
 `
 
 const Input = styled.input`

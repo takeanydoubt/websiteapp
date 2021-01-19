@@ -41,7 +41,6 @@ function HeroSection() {
 export default HeroSection
 
 const WrapperWave = styled.div`
-  width: 100%;
   background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
 `
 const Wrapper = styled.div`
