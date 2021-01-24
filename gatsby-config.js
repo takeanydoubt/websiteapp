@@ -6,6 +6,18 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    // {
+    //   resolve: "gatsby-source-graphql",
+    //   options: {
+    //     typeName: "Subject",
+    //     fieldName: "myadmin",
+    //     url:
+    //       "https://ntqf2byhpvbnxiqptpfozfwppm.appsync-api.us-east-2.amazonaws.com/graphql",
+    //     headers: {
+    //       "x-api-key": "27u7jtv73c5a8id49024bai2b",
+    //     },
+    //   },
+    // },
 
     {
       resolve: `gatsby-source-filesystem`,

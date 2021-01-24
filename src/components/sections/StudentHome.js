@@ -7,7 +7,7 @@ const StudentHome = () => {
       <StudentTool />
       <HeroGroup>
         <Announcement>
-          <Title> My Announcements</Title>
+          <Title> My updated Announcements </Title>
           <Text>
             No Institution Announcements have been posted in the last 7 days.
           </Text>
